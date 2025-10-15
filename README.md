@@ -12,8 +12,8 @@
 | birthday           | date   | null: false |
 
 ### Association
-- have_many :items
-- have_many :orders
+- has_many :items
+- has_many :orders
 
 
 ## Itemsテーブル
@@ -57,7 +57,7 @@
 | city           | string     | null: false |
 | street_address | string     | null: false |
 | building       | string     |
-| phone_number   | integer    | null: false |
+| phone_number   | string     | null: false |
 | order          | references | null: false, foreign_key: true |
 
 ### Association
