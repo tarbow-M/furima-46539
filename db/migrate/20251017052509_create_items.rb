@@ -1,0 +1,16 @@
+class CreateItems < ActiveRecord::Migration[7.1]
+  def change
+    create_table :items do |t|
+      t.string :name,              null: false, default: ""
+      t.text :description,         null: false
+      t.integer :category_id,      null: false
+      t.integer :condition_id,     null: false
+      t.integer :delivery_id,      null: false
+      t.integer :prefecture_id,    null: false
+      t.integer :ship_id,          null: false
+      t.integer :price,            null: false
+      t.references :user,          null: false
+      t.timestamps
+    end
+  end
+end
