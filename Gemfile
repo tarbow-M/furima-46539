@@ -83,4 +83,11 @@ end
 # ユーザー機能用のGem 
 gem 'devise'
 
+# 画像加工ツールの導入
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
+# ActiveHash導入
+gem 'active_hash'
+
 
