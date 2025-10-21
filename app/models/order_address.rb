@@ -15,11 +15,11 @@ class OrderAddress
   end
 
   # 郵便番号の形式を検証（存在する場合のみ）
-  validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)" }, allow_blank: true
+  validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }, allow_blank: true
   # 都道府県の選択が「---」でないことを検証
   validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   # 電話番号を半角10桁以上11桁以内に制限
-  validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "is invalid" }, allow_blank: true
+  validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'is invalid' }, allow_blank: true
 
   def save
     # トランザクション処理により、どちらかの保存に失敗した場合は両方ともロールバック(無かったことになる)
