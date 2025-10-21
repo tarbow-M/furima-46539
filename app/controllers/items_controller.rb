@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_if_item_sold_out, only: [:edit, :update, :destroy] 
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   def index
@@ -54,5 +55,10 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  # 追加: 商品が売却済みの場合にトップページへリダイレクト
+  def redirect_if_item_sold_out
+    redirect_to root_path if @item.order.present?
   end
 end

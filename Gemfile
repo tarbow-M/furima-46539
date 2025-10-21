@@ -90,4 +90,11 @@ gem 'image_processing', '~> 1.2'
 # ActiveHash導入
 gem 'active_hash'
 
+# 処理停止
+gem 'pry-rails'
+
+# Pay.jp導入
+gem 'payjp'
+
+gem 'gon'
 
