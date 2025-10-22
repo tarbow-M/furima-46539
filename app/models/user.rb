@@ -3,6 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :items
+  has_many :orders
 
   # 空欄禁止
   validates :nickname, presence: true

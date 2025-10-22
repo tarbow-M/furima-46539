@@ -17,6 +17,8 @@ test:
   password:
   host: localhost
   database: furima_46539_test
+  checkout_timeout: 5.0  # コネクションが使用中の場合、解放を待つ最大時間（秒）
+  pool: 5               # 同時に持てるコネクション数の上限（通常はデフォルトでOKだが念のため確認）
 
 production:
   <<: *default
