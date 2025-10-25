@@ -98,3 +98,6 @@ gem 'payjp'
 
 gem 'gon'
 
+# S3導入
+gem "aws-sdk-s3", require: false
+
