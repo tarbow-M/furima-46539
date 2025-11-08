@@ -53,6 +53,12 @@ group :development, :test do
   gem 'factory_bot_rails'
   # Fakerでランダム変数出力
   gem 'faker'
+  # Capistrano導入
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
