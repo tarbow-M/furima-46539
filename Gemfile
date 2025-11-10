@@ -84,7 +84,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg', force_ruby_platform: true
   gem 'unicorn', '6.1.0' # Unicorn(アプリケーションサーバー)導入
 end
 # ユーザー機能用のGem 
